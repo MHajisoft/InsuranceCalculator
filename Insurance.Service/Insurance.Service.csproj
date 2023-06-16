@@ -20,4 +20,8 @@
     <ItemGroup>
       <Folder Include="Services\" />
     </ItemGroup>
+
+    <ItemGroup>
+      <Compile Remove="Migrations\20230616060932_Initial.Designer.cs" />
+    </ItemGroup>
 </Project>

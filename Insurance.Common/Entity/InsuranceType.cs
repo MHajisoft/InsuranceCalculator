@@ -8,5 +8,5 @@ public class InsuranceType : BaseEntity
 
     public long MaxInvest { get; set; }
     
-    public float PaymentFactor { get; set; }
+    public double PaymentFactor { get; set; }
 }
