@@ -70,9 +70,4 @@ public static class ExceptionHandlingConfiguration
 
         return Task.CompletedTask;
     }
-
-    public static string GetExceptionDescription(string exception)
-    {
-        return "خطا ترجمه نشده است";
-    }
 }

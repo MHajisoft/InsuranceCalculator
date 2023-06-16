@@ -1,4 +1,5 @@
 using System.Text;
+using Insurance.Common.Base;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
@@ -19,9 +20,7 @@ public static class AuthenticationConfiguration
 
     public static Action<JwtBearerOptions> GetJwtBearerOptions()
     {
-        const string SecurityKey = "!n$urr@n3@pi$3cur!tyC0d3";
-
-        var key = Encoding.ASCII.GetBytes(SecurityKey);
+        var key = Encoding.ASCII.GetBytes(InsuranceConstant.SecurityKey);
 
         return config =>
         {

@@ -1,10 +1,8 @@
-﻿namespace Insurance.Common.Entity;
+﻿namespace Insurance.Common.Dto;
 
-public abstract class BaseEntity
+public class BaseDto
 {
     public long Id { get; set; }
-
-    public byte[] Version { get; set; }
 
     public string CreateUser { get; set; }
 

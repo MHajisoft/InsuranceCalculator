@@ -37,26 +37,15 @@ public class MigrationUtil
 
                 await dbContext.InsuranceTypes.AddRangeAsync(new List<InsuranceType>
                 {
-                    new()
-                    {
-                        Title = "پوشش جراحی", MinInvest = 5000, MaxInvest = 500000000, PaymentFactor = 0.0052, CreateDate = DateTime.Now, CreateUser = adminUser
-                    },
-                    new()
-                    {
-                        Title = "پوشش دندانپزشکی", MinInvest = 4000, MaxInvest = 400000000, PaymentFactor = 0.0042, CreateDate = DateTime.Now, CreateUser = adminUser
-                    },
-                    new()
-                    {
-                        Title = "پوشش بستری", MinInvest = 2000, MaxInvest = 200000000, PaymentFactor = 0.005, CreateDate = DateTime.Now, CreateUser = adminUser
-                    },
+                    new() { Title = "پوشش جراحی", MinInvest = 5000, MaxInvest = 500000000, PaymentFactor = 0.0052 },
+                    new() { Title = "پوشش دندانپزشکی", MinInvest = 4000, MaxInvest = 400000000, PaymentFactor = 0.0042 },
+                    new() { Title = "پوشش بستری", MinInvest = 2000, MaxInvest = 200000000, PaymentFactor = 0.005 },
                 });
 
                 await dbContext.Persons.AddAsync(new()
                 {
                     FirstName = "علی",
-                    LastName = "احمدی",
-                    CreateDate = DateTime.Now,
-                    CreateUser = adminUser
+                    LastName = "احمدی"
                 });
 
                 await dbContext.SaveChangesAsync();
