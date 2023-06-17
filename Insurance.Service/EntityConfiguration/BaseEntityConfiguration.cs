@@ -1,5 +1,4 @@
 ﻿using Insurance.Common.Entity;
-using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
 namespace Insurance.Service.EntityConfiguration;

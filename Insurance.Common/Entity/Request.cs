@@ -2,6 +2,8 @@
 
 public class Request : BaseEntity
 {
+    public string Title { get; set; }
+    
     public Person Person { get; set; }
     public long PersonId { get; set; }
 

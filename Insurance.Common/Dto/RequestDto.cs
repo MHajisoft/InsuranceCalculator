@@ -2,6 +2,8 @@
 
 public class RequestDto : BaseDto
 {
+    public string Title { get; set; }
+    
     public string PersonFullName { get; set; }
     public long PersonId { get; set; }
 

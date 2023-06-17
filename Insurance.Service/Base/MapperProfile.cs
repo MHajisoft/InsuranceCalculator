@@ -19,7 +19,7 @@ public class MapperProfile : Profile
         CreateMap<InsuranceTypeDto, InsuranceType>().IncludeBase<BaseDto, BaseEntity>();
 
         CreateMap<Request, RequestDto>();
-        CreateMap<RequestDto, Request>().IncludeBase<BaseDto, BaseEntity>();
+        CreateMap<RequestApiDto, Request>();
 
         CreateMap<AppUser, AppUserDto>();
         CreateMap<AppUserDto, AppUser>();

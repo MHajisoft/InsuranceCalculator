@@ -1,6 +1,4 @@
-﻿using System.ComponentModel.DataAnnotations;
-
-namespace Insurance.Common.Entity;
+﻿namespace Insurance.Common.Entity;
 
 public class Person : BaseEntity
 {
@@ -9,4 +7,6 @@ public class Person : BaseEntity
     public string LastName { get; set; }
     
     public string? NationalCode { get; set; }
+
+    public string FullName => $"{FirstName} {LastName}";
 }

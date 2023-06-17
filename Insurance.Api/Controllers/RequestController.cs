@@ -27,12 +27,28 @@ public class RequestController : BaseApiController
     }
 
     [HttpPost("update")]
-    public async Task<IActionResult> Update(RequestDto dto)
+    public async Task<IActionResult> Update(RequestApiDto dto)
     {
         var result = await _requestService.Update(dto);
 
         if (result.IsTransient())
             return NotFound();
+
+        return Ok(result);
+    }
+
+    [HttpPost("update-collection")]
+    public async Task<IActionResult> UpdateCollection([FromBody]CollectionApiDto dto)
+    {
+        var result = await _requestService.UpdateCollection(dto);
+
+        return Ok(result);
+    }
+
+    [HttpGet("get-payment-info")]
+    public async Task<IActionResult> GetPaymentInfo(long personId)
+    {
+        var result = await _requestService.GetPaymentInfo(personId);
 
         return Ok(result);
     }
